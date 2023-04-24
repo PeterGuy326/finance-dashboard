@@ -2,6 +2,7 @@ import { Box, useMediaQuery } from "@mui/material";
 import Row1 from "./Row1";
 import Row2 from "./Row2";
 import Row3 from "./Row3";
+import { useEffect } from "react";
 
 type Props = {};
 
@@ -52,6 +53,9 @@ const gridTemplateSmallScreens = `
 
 const Dashboard = (props: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1200px)");
+  useEffect(() => {
+    document.title = '巨丰量化 - dashboard';
+  }, []);
   return (
     <Box
       width="100%"
